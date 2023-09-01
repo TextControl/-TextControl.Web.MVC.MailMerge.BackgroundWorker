@@ -1,0 +1,15 @@
+﻿<p>This is the calling application. Use the button below to send a request to the Web API.</p>
+
+<a onclick="RequestWebAPI()" class="btn btn-primary">Send Request</a>
+
+<script>
+    function RequestWebAPI() {
+        $.ajax({
+            url: '@Url.ActionLink("RequestWebAPI")',
+            type: 'GET',
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    }
+</script>
